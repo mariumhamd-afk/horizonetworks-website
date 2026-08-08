@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Category, name: category, widget: string, default: General}
+      - {label: Summary, name: summary, widget: text}
+      - {label: Body, name: body, widget: markdown}
+
+  - name: solutions
+    label: Solution Pages
+    folder: _solutions
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Icon, name: icon, widget: string, hint: "Use an emoji e.g. 🌐"}
+      - {label: Summary, name: summary, widget: text}
+      - {label: Body, name: body, widget: markdown}
+      - {label: Partners, name: partners, widget: string, hint: "Comma separated e.g. Cisco, Juniper"}
