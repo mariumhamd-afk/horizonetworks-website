@@ -45,17 +45,34 @@ nav{
 }
 .nav-logo{height:36px;width:auto;display:block}
 .nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-size:13px;font-weight:500;color:var(--text-2);letter-spacing:.01em;transition:color .15s}
-.nav-links a:hover{color:var(--text)}
-.nav-cta{
-  background:var(--navy);color:#fff;
-  font-size:13px;font-weight:600;
+.nav-links a{
+  font-size:13px;
+  font-weight:500;
+  color:var(--text-2);
+  letter-spacing:.01em;
+  transition:color .15s
+}
+
+.nav-links a:hover{
+  color:var(--text)
+}
+
+.nav-links a.nav-cta{
+  background:var(--navy);
+  color:#FFFFFF;
+  font-size:13px;
+  font-weight:600;
   padding:.5rem 1.2rem;
   border-radius:6px;
   transition:background .15s,transform .1s;
   white-space:nowrap;
 }
-.nav-cta:hover{background:var(--navy-dark);color:#fff;transform:translateY(-1px)}
+
+.nav-links a.nav-cta:hover{
+  background:var(--navy-dark);
+  color:#FFFFFF;
+  transform:translateY(-1px)
+}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:20px;height:1.5px;background:var(--text);border-radius:2px}
 .mobile-nav{
